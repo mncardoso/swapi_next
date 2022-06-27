@@ -1,20 +1,38 @@
 {
-  "name": "starwars",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6"
-  }
+	"name": "starwars",
+	"version": "0.1.0",
+	"private": false,
+	"scripts": {
+		"dev": "cross-env AUTOPREFIXER_GRID=autoplace next dev",
+		"build": "cross-env AUTOPREFIXER_GRID=autoplace next build",
+		"start": "next start",
+		"lint": "next lint",
+		"export": "npm run build && next export"
+	},
+	"dependencies": {
+		"next": "12.1.6",
+		"normalize.css": "^8.0.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"sharp": "^0.30.7"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.7",
+		"cross-env": "^7.0.3",
+		"eslint": "8.18.0",
+		"eslint-config-next": "12.1.6"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version",
+			"last 1 ie version"
+		]
+	}
 }

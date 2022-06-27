@@ -1,16 +1,116 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+	/* Colors */
+	--color-accent: hsl(209, 75%, 50%);
+	--color-accent-light: hsl(209, 75%, 75%);
+	--color-secondary: hsl(0, 0%, 85%);
+	--color-background: hsl(42, 42%, 95%);
+	--color-text: hsl(0, 0%, 0%);
+
+	/* Fonts */
+	--font-thin: 100;
+	--font-light: 300;
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-bold: 700;
+	--font-black: 900;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: var(--color-text);
+	background-color: var(--color-background);
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button,
+span {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-family: "Orbitron", sans-serif;
+	font-size: 2.25rem;
+	font-weight: var(--font-black);
+	text-decoration: none;
+	margin: none;
+	line-height: 2;
+}
+
+h2 {
+	font-family: "Orbitron", sans-serif;
+	font-size: 1.5rem;
+	font-weight: var(--font-black);
+	text-decoration: none;
+	margin: none;
+	line-height: 1.7;
+}
+
+h3 {
+	font-family: "Orbitron", sans-serif;
+	font-size: 0.75rem;
+	font-weight: var(--font-black);
+	text-decoration: none;
+	margin: none;
+	line-height: 1.4;
+}
+
+p {
+	font-family: "Orbitron", sans-serif;
+	font-size: 0.75rem;
+	letter-spacing: 0.113rem;
+	font-weight: var(--font-regular);
+	text-decoration: none;
+	margin: none;
+	line-height: 1.25rem;
+}
+
+a {
+	font-family: "Orbitron", sans-serif;
+	font-size: 1rem;
+	font-weight: var(--font-regular);
+	text-decoration: none;
+	margin: none;
+	line-height: 1.5rem;
+}
+
+a:link,
+a:visited {
+	color: var(--color-text);
+}
+
+a:hover,
+a:active {
+	color: var(--color-text);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		/* Colors */
+		--color-accent: hsl(0, 75%, 50%);
+		--color-accent-light: hsl(0, 75%, 75%);
+		--color-secondary: hsl(0, 0%, 15%);
+		--color-background: hsl(0, 0%, 10%);
+		--color-text: hsl(0, 0%, 100%);
+	}
 }
